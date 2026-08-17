@@ -1,0 +1,35 @@
+body {
+    margin: 0;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: Arial, sans-serif;
+}
+
+.product {
+    text-align: center;
+}
+
+.quantity {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+
+    margin: 20px 0;
+}
+
+button {
+    width: 40px;
+    height: 40px;
+
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#quantity {
+    font-size: 20px;
+}

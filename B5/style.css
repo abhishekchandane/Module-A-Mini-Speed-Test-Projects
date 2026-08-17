@@ -1,0 +1,166 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+}
+
+.result {
+    width: 700px;
+    margin: 30px auto 20px;
+    padding: 15px;
+
+    background: white;
+    border: 1px solid #ccc;
+
+    text-align: center;
+    font-size: 18px;
+}
+
+.floor-plan {
+    position: relative;
+
+    width: 700px;
+    height: 500px;
+
+    margin: auto;
+
+    background: white;
+    border: 2px solid #333;
+}
+
+
+/* Rooms */
+
+.room {
+    position: absolute;
+
+    width: 70px;
+    height: 60px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #ddd;
+    border: 2px solid #333;
+
+    cursor: pointer;
+
+    font-size: 20px;
+    font-weight: bold;
+
+    z-index: 2;
+}
+
+.room:hover {
+    background: #bbb;
+}
+
+.room.selected {
+    background: #f5c542;
+}
+
+.room.path {
+    background: #5cb85c;
+    color: white;
+}
+
+
+/* Room positions */
+
+#A {
+    left: 50px;
+    top: 70px;
+}
+
+#D {
+    left: 200px;
+    top: 70px;
+}
+
+#E {
+    left: 350px;
+    top: 70px;
+}
+
+#F {
+    left: 500px;
+    top: 70px;
+}
+
+#C {
+    left: 500px;
+    top: 220px;
+}
+
+#G {
+    left: 500px;
+    top: 350px;
+}
+
+#H {
+    left: 350px;
+    top: 350px;
+}
+
+#B {
+    left: 200px;
+    top: 350px;
+}
+
+
+/* Corridors */
+
+.line {
+    position: absolute;
+
+    height: 4px;
+
+    background: #888;
+
+    z-index: 1;
+}
+
+.a-d {
+    width: 80px;
+    left: 120px;
+    top: 100px;
+}
+
+.d-e {
+    width: 80px;
+    left: 270px;
+    top: 100px;
+}
+
+.e-f {
+    width: 80px;
+    left: 420px;
+    top: 100px;
+}
+
+.f-g {
+    width: 4px;
+    height: 130px;
+
+    left: 535px;
+    top: 130px;
+}
+
+.g-h {
+    width: 80px;
+    left: 420px;
+    top: 380px;
+}
+
+.f-c {
+    width: 4px;
+    height: 90px;
+
+    left: 535px;
+    top: 130px;
+}

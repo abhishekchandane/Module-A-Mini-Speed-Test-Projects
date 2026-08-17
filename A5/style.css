@@ -1,0 +1,129 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #111;
+
+    font-family: Arial, sans-serif;
+}
+
+.chart {
+    width: 600px;
+    height: 350px;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+
+    padding: 30px 60px;
+
+    border-bottom: 2px solid #555;
+}
+
+.bar {
+    position: relative;
+
+    width: 55px;
+
+    background: #3498db;
+
+    transform: scaleY(0);
+    transform-origin: bottom;
+
+    animation: fill 1.5s ease-out forwards;
+}
+
+
+/* Values */
+
+.bar span {
+    position: absolute;
+
+    top: -35px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    color: white;
+
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+/* Bar Heights */
+
+.bar:nth-child(1) {
+    height: 180px;
+}
+
+.bar:nth-child(2) {
+    height: 75px;
+}
+
+.bar:nth-child(3) {
+    height: 105px;
+}
+
+.bar:nth-child(4) {
+    height: 240px;
+}
+
+
+/* 3D Top Face */
+
+.bar::before {
+    content: "";
+
+    position: absolute;
+
+    top: -15px;
+    left: 8px;
+
+    width: 55px;
+    height: 15px;
+
+    background: #6db7e8;
+
+    transform: skewX(-45deg);
+}
+
+
+/* 3D Side Face */
+
+.bar::after {
+    content: "";
+
+    position: absolute;
+
+    top: -7px;
+    right: -15px;
+
+    width: 15px;
+    height: 100%;
+
+    background: #21618c;
+
+    transform: skewY(-45deg);
+}
+
+
+/* Fill Animation */
+
+@keyframes fill {
+    from {
+        transform: scaleY(0);
+    }
+
+    to {
+        transform: scaleY(1);
+    }
+}

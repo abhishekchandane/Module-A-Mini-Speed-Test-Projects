@@ -1,0 +1,267 @@
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background: #222;
+            font-family: Arial, sans-serif;
+        }
+
+        .traffic-light {
+            width: 180px;
+            padding: 20px;
+
+            background: #111;
+            border-radius: 20px;
+        }
+
+        .light {
+            width: 100px;
+            height: 100px;
+
+            margin: 15px auto;
+
+            border-radius: 50%;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-size: 35px;
+            font-weight: bold;
+
+            opacity: 0.2;
+        } 
+
+        .green {
+            background: green;
+
+            animation:
+                greenLight 13s infinite,
+                greenCount 13s infinite;
+        }
+
+        @keyframes greenLight {
+
+            0% {
+                opacity: 1;
+            }
+
+            38.46% {
+                opacity: 1;
+            }
+
+            38.47% {
+                opacity: 0.2;
+            }
+
+            100% {
+                opacity: 0.2;
+            }
+        }
+
+        @keyframes greenCount {
+
+            0% {
+                content: "5";
+            }
+
+            7.69% {
+                content: "5";
+            }
+
+            7.70% {
+                content: "4";
+            }
+
+            15.38% {
+                content: "4";
+            }
+
+            15.39% {
+                content: "3";
+            }
+
+            23.07% {
+                content: "3";
+            }
+
+            23.08% {
+                content: "2";
+            }
+
+            30.76% {
+                content: "2";
+            }
+
+            30.77% {
+                content: "1";
+            }
+
+            38.46% {
+                content: "1";
+            }
+
+            38.47% {
+                content: "";
+            }
+
+            100% {
+                content: "";
+            }
+        }
+ 
+
+        .yellow {
+            background: yellow;
+
+            animation:
+                yellowLight 13s infinite,
+                yellowCount 13s infinite;
+        }
+
+        @keyframes yellowLight {
+
+            0%, 38.46% {
+                opacity: 0.2;
+            }
+
+            38.47%, 61.54% {
+                opacity: 1;
+            }
+
+            61.55%, 100% {
+                opacity: 0.2;
+            }
+        }
+
+        @keyframes yellowCount {
+
+            0%, 38.46% {
+                content: "";
+            }
+
+            38.47% {
+                content: "3";
+            }
+
+            46.15% {
+                content: "3";
+            }
+
+            46.16% {
+                content: "2";
+            }
+
+            53.84% {
+                content: "2";
+            }
+
+            53.85% {
+                content: "1";
+            }
+
+            61.54% {
+                content: "1";
+            }
+
+            61.55%, 100% {
+                content: "";
+            }
+        }
+ 
+
+        .red {
+            background: red;
+
+            animation:
+                redLight 13s infinite,
+                redCount 13s infinite;
+        }
+
+        @keyframes redLight {
+
+            0%, 61.54% {
+                opacity: 0.2;
+            }
+
+            61.55%, 100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes redCount {
+
+            0%, 61.54% {
+                content: "";
+            }
+
+            61.55% {
+                content: "5";
+            }
+
+            69.23% {
+                content: "5";
+            }
+
+            69.24% {
+                content: "4";
+            }
+
+            76.92% {
+                content: "4";
+            }
+
+            76.93% {
+                content: "3";
+            }
+
+            84.61% {
+                content: "3";
+            }
+
+            84.62% {
+                content: "2";
+            }
+
+            92.30% {
+                content: "2";
+            }
+
+            92.31% {
+                content: "1";
+            }
+
+            100% {
+                content: "1";
+            }
+        }
+
+
+ 
+
+        .light::after {
+            content: "";
+            color: white;
+        }
+
+        .green::after {
+            animation: greenCount 13s infinite;
+        }
+
+        .yellow::after {
+            animation: yellowCount 13s infinite;
+        }
+
+        .red::after {
+            animation: redCount 13s infinite;
+        }
+

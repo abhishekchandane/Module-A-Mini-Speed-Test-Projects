@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: Arial, sans-serif;
+}
+
+form {
+    width: 350px;
+}
+
+h2 {
+    text-align: center;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    box-sizing: border-box;
+}
+
+textarea {
+    height: 100px;
+}
+
+button {
+    margin-top: 15px;
+    padding: 10px 20px;
+}
+
+small {
+    display: block;
+    color: red;
+    margin-top: 5px;
+}
+
+#success {
+    color: green;
+}

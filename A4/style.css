@@ -1,0 +1,79 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #000;
+    color: #fff;
+
+    font-family: Arial, sans-serif;
+}
+
+.text-container {
+    text-align: center;
+    font-size: 48px;
+    font-weight: 600;
+}
+
+.line {
+    opacity: 0;
+    transform: translateY(-80px);
+
+    animation: textAnimation 9s ease-in-out infinite;
+}
+
+/* Hi, nice */
+.line-1 {
+    animation-delay: 2s;
+}
+
+/* to see */
+.line-2 {
+    animation-delay: 1s;
+}
+
+/* you here */
+.line-3 {
+    animation-delay: 0s;
+    color: #00d4ff;
+}
+
+@keyframes textAnimation {
+
+    /* Hidden above */
+    0% {
+        opacity: 0;
+        transform: translateY(-80px);
+    }
+
+    /* Slide down + fade in */
+    15% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    /* Stay visible */
+    55% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    /* Fade out */
+    70% {
+        opacity: 0;
+        transform: translateY(0);
+    }
+
+    /* Hidden */
+    100% {
+        opacity: 0;
+        transform: translateY(0);
+    }
+}

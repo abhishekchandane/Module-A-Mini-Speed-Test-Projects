@@ -1,0 +1,173 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #000;
+    overflow: hidden;
+}
+
+.solar-system {
+    position: relative;
+
+    width: 500px;
+    height: 500px;
+}
+
+
+/* =========================
+   SUN
+========================= */
+
+.sun {
+    position: absolute;
+
+    width: 80px;
+    height: 80px;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    background: #f9c74f;
+
+    border-radius: 50%;
+
+    box-shadow: 0 0 30px #f9c74f;
+}
+
+
+/* =========================
+   EARTH ORBIT
+========================= */
+
+.earth-orbit {
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    top: 50%;
+    left: 50%;
+
+    margin-left: -150px;
+    margin-top: -150px;
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+
+    border-radius: 50%;
+
+    animation: earthOrbit 8s linear infinite;
+}
+
+
+/* =========================
+   EARTH
+========================= */
+
+.earth {
+    position: absolute;
+
+    width: 45px;
+    height: 45px;
+
+    top: -22.5px;
+    left: 50%;
+
+    margin-left: -22.5px;
+
+    background: #3498db;
+
+    border-radius: 50%;
+
+    box-shadow: 0 0 10px rgba(52, 152, 219, 0.8);
+}
+
+
+/* =========================
+   MOON ORBIT
+========================= */
+
+.moon-orbit {
+    position: absolute;
+
+    width: 100px;
+    height: 100px;
+
+    top: 50%;
+    left: 50%;
+
+    margin-left: -50px;
+    margin-top: -50px;
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    border-radius: 50%;
+
+    animation: moonOrbit 2s linear infinite;
+}
+
+
+/* =========================
+   MOON
+========================= */
+
+.moon {
+    position: absolute;
+
+    width: 18px;
+    height: 18px;
+
+    top: -9px;
+    left: 50%;
+
+    margin-left: -9px;
+
+    background: #ddd;
+
+    border-radius: 50%;
+
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.6);
+}
+
+
+/* =========================
+   EARTH ANIMATION
+========================= */
+
+@keyframes earthOrbit {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+
+/* =========================
+   MOON ANIMATION
+========================= */
+
+@keyframes moonOrbit {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
